@@ -66,7 +66,7 @@ $(document).ready(function(){
         order.getTotal()
     })
     $('#submission').on('click',function(e){
-        alert("Your order total is sh" + order.getTotal())
+        alert("Your order total is :sh" + order.getTotal())
     })
 })
 
