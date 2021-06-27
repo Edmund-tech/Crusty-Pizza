@@ -64,24 +64,24 @@
       <tr>
         <td>Cheese-stuffed crust</td>
         <td class = "clickable" data-price = "500" data-type = "Cheese stuffed crust" id = "price1">500</td>
-        <td class = "clickable">1000</td>
-        <td class = "clickable">1500</td>
+        <td class = "clickable" data-price = "1000" data-type = "Cheese stuffed crust" id = "price2">1000</td>
+        <td class = "clickable" data-price = "1500" data-type = "Cheese stuffed crust" id = "price3">1500</td>
       </tr>
       <tr>
         <td>Pizza bagels</td>
-        <td class = "clickable">400</td>
-        <td class = "clickable">800</td>
-        <td class = "clickable">1200</td>
+        <td class = "clickable" data-price = "400" data-type = "Pizza bagels" id = "price3">400</td>
+        <td class = "clickable" data-price = "800" data-type = "Pizza bagels" id = "price4">800</td>
+        <td class = "clickable" data-price = "1200" data-type = "Pizza bagels" id = "price5">1200</td>
       </tr>
       <tr>
         <td>Thin crust</td>
-        <td class = "clickable">700</td>
-        <td class = "clickable">1400</td>
-        <td class = "clickable">2100</td>
+        <td class = "clickable" data-price = "700" data-type = "Thin crust" id = "price6">700</td>
+        <td class = "clickable" data-price = "1400" data-type = "Thin crust" id = "price7">1400</td>
+        <td class = "clickable" data-price = "2100" data-type = "Thin crust" id = "price8">2100</td>
       </tr>
       <tr>
         <td>Silicon style</td>
-        <td class = "clickable">800</td>
+        <td class = "clickable" data-price = "800" data-type = "Silicon style" id = "price9">800</td>
         <td class = "clickable">1600</td>
         <td class = "clickable">2400</td>
       </tr>
@@ -134,8 +134,8 @@
       <p>
         Do you wish to have your pizza delivered to you?<img src = "images/delivery.jpeg"></br>
         <form>
-          <input type="radio" name="yes" value="yes">Yes
-          <input type="radio" name="no" value="no">No
+          <input type="radio" name="delivery" value="yes" id = "yes">Yes</input>
+          <input type="radio" name="delivery" value="no" id = "no">No</input>
         </form>
     </font>
     </p>
@@ -145,6 +145,7 @@
         <font size="6">Total cost:<span id = "totalCost"></span></font>
       </h4>
     </div>
+    <button id = "submission">Submit</button>
     <p>
       <font size="7">
         Everything goes right with a slice of pizza.<img src = "images/emoji.jpg">

@@ -2,6 +2,7 @@ function Order(){
     this.items = {}
     this.size = 0
     this.total = 0
+    this.delivery = false
 }
 function Item(price,type,id){
     this.price = price
@@ -31,9 +32,14 @@ Order.prototype.getTotal = function(){
         var currentTotal = currentItem.price * currentItem.quantity
         total = total + currentTotal 
     }
-    this.total = total
-    $('#totalCost').text(total)
-        return total
+    this.total = total * this.size
+    $('#totalCost').text(this.total)
+    if(this.delivery){
+        this.total = this.total + 200
+    }
+     console.log(this.total)  
+    return total
+        
 }
 var order = new Order()
 $(document).ready(function(){
@@ -43,18 +49,24 @@ $(document).ready(function(){
         var itemData = $('#' + itemID).data()
         var item = new Item(itemData.price,itemData.type,itemID)
         order.addItem(item)
-        console.log(111,item)
-        console.log(222,order)
-        console.log(333,order.getTotal())
     })
     $('#size').on('change',function(e){
-        var value = e.target.value
+        e.preventDefault()
+        var value = parseInt(e.target.value)
         if(Number.isInteger(value) && value>0){
             order.size = value
             order.getTotal()
         }else{
             alert("Invalid input")
         }
+    })
+    $('input[name="delivery"]').on('change',function(e){
+        console.log(111,this.value)
+        order.delivery = this.value === 'yes'
+        order.getTotal()
+    })
+    $('#submission').on('click',function(e){
+        alert("Your order total is" + order.getTotal())
     })
 })
 
