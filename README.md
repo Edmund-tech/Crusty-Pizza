@@ -6,6 +6,7 @@ This is another working website where you can order your favourite pizza.
 - The list of pizzas and the toppings
 - The option to have your pizza delivered.
 - Cool pictures
+- Calculates total of your order.
 ## Technologies used
 - HTML
 - CSS
