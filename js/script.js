@@ -33,11 +33,11 @@ Order.prototype.getTotal = function(){
         total = total + currentTotal 
     }
     this.total = total * this.size
-    $('#totalCost').text(this.total)
     if(this.delivery){
         this.total = this.total + 200
     }
      console.log(this.total)  
+     $('#totalCost').text(this.total)
     return total
         
 }
