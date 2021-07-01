@@ -1,3 +1,6 @@
+.landing{
+    background-color: rgb(230, 138, 27);
+}
 #pic1{
     background-image: url('./images/crusty pizza.jpg');
     color: white;
@@ -35,4 +38,12 @@ h3{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+    margin-left: 50px;
+  }
+  #location{
+      margin-left: 50px;
+  }
+  .clickable:hover{
+      text-decoration: underline;
+      color: red;
   }
