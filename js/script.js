@@ -61,7 +61,6 @@ $(document).ready(function(){
         }
     })
     $('input[name="delivery"]').on('change',function(e){
-        console.log(111,this.value)
         order.delivery = this.value === 'yes'
         order.getTotal()
     })
